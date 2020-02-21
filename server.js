@@ -7,7 +7,7 @@ var app=express();
 app.use(cors()); // no idea what this does, seemed to work without
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/office-scheduler', { useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology:true})
+mongoose.connect('mongodb://localhost:27017/db', { useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology:true})
 var connection =mongoose.connection
 
 connection.on('error',console.error.bind(console,'connection error:'))
